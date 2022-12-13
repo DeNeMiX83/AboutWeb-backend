@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "aboutweb-backend"
+version = "0.1.0"
+description = ""
+authors = ["mihey <daniil53891@yandex.com>"]
+readme = "README.md"
+packages = [{include = "aboutweb_backend"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pydantic = {extras = ["email"], version = "^1.10.2"}
+pytest = "^7.2.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.pytest.ini_options]
+python_files = [
+    "tests/*.py",
+    "tests/**/*.py",
+]
+python_classes = [
+    "Test*",
+    "*Test",
+]
