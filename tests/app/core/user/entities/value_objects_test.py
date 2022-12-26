@@ -1,6 +1,6 @@
 import pytest
 from pathlib import Path
-from app.entities.user.value_objects import *
+from app.core.user.entities.value_objects import *
 
 
 class EmailTest:
@@ -75,8 +75,7 @@ class PostTest:
 
 class UserNameTest:
     def test_username(self):
-        with pytest.raises(ValueError):
-            UserName('test')
+        UserName('test')
 
     def test_username_not_str(self):
         with pytest.raises(TypeError):
@@ -88,7 +87,7 @@ class UserNameTest:
 
     def test_username_long(self):
         with pytest.raises(ValueError):
-            UserName('testtesttesttesttesttesttest')
+            UserName('testtesttesttesttesttesttesttesttest')
 
     def test_username_with_spaces(self):
         with pytest.raises(ValueError):
@@ -97,10 +96,6 @@ class UserNameTest:
     def test_username_start_digit(self):
         with pytest.raises(ValueError):
             UserName('1test')
-
-    def test_username_dentifier(self):
-        with pytest.raises(ValueError):
-            UserName('number1')
 
     def test_username_special_characters(self):
         with pytest.raises(ValueError):

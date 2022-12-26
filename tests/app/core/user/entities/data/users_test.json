@@ -1,0 +1,37 @@
+[
+    {
+        "username": "test",
+        "email": "example@test.com",
+        "password": "TestPassword1!",
+        "avatar": "tests/app/core/user/entities/data/test_image.png",
+        "posts": ["designer", "frontend"]
+    },
+    {
+        "username": "test",
+        "email": "example@test.com",
+        "password": "TestPassword1!",
+        "avatar": "tests/app/core/user/entities/data/test_image.png",
+        "posts": ["designer", "frontend"]
+    },
+    {
+        "username": "test",
+        "email": "example@test.com",
+        "password": "TestPassword1!",
+        "avatar": "tests/app/core/user/entities/data/test_image.png",
+        "posts": ["designer", "frontend"]
+    },
+    {
+        "username": "test",
+        "email": "example@test.com",
+        "password": "TestPassword1!",
+        "avatar": "tests/app/core/user/entities/data/test_image.png",
+        "posts": ["designer", "frontend"]
+    },
+    {
+        "username": "test",
+        "email": "example@test.com",
+        "password": "TestPassword1!",
+        "avatar": "tests/app/core/user/entities/data/test_image.png",
+        "posts": ["designer", "frontend"]
+    }
+]

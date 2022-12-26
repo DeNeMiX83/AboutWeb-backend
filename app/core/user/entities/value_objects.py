@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 from enum import Enum
 import re
-from app.entities.base.value_object import ValueObject
+from app.core.shared.entities.value_object import ValueObject
 
 
 @dataclass(frozen=True)
@@ -23,8 +23,8 @@ class UserName(ValueObject):
         if " " in v:
             raise ValueError("Username must not contain spaces")
 
-        if v.isidentifier():
-            raise ValueError("Username must not be identifier")
+        # if v.isidentifier():
+        #     raise ValueError("Username must not be identifier")
 
         if v[0].isnumeric():
             raise ValueError("Username must not start with a digit")
@@ -79,10 +79,7 @@ class Password(ValueObject):
 
         if not any(char in "!@#$%^&*()_+" for char in v):
             raise ValueError("Password must contain at least one special character")
-        
 
-    def __repr__(self):
-        return f'Password({super().__repr__()})'
 
 @dataclass(frozen=True)
 class Post(str, ValueObject, Enum):
