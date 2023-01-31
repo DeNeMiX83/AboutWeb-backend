@@ -1,8 +1,8 @@
 from typing import List
-from app.shared.dto import Dto
+from app.shared.dto import BaseDto
 
 
-class UserDto(Dto):
+class User(BaseDto):
     username: str
     email: str
     password: str

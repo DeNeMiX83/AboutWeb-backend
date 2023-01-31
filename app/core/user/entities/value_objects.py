@@ -2,10 +2,15 @@ from dataclasses import dataclass
 from enum import Enum
 import re
 from app.core.shared.entities.value_object import ValueObject
+from typing import NewType
+from uuid import UUID
+
+
+UserID = NewType('UserID', UUID)
 
 
 @dataclass(frozen=True)
-class UserName(ValueObject):
+class UserName(ValueObject, str):
     value: str
 
     def __post_init__(self):
@@ -39,7 +44,7 @@ class UserName(ValueObject):
 
 
 @dataclass(frozen=True)
-class Email(ValueObject):
+class Email(ValueObject, str):
     value: str
 
     def __post_init__(self):
@@ -53,7 +58,7 @@ class Email(ValueObject):
             raise ValueError("Email must be valid")
 
 @dataclass(frozen=True)
-class Password(ValueObject):
+class RawPassword(ValueObject, str):
     value: str
 
     def __post_init__(self):
@@ -79,6 +84,11 @@ class Password(ValueObject):
 
         if not any(char in "!@#$%^&*()_+" for char in v):
             raise ValueError("Password must contain at least one special character")
+
+
+@dataclass(frozen=True)
+class HashedPassword(ValueObject, str):
+    value: str
 
 
 @dataclass(frozen=True)

@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 import uuid
-from app.core.shared.entities.value_objects import UUID
+from uuid import UUID
 
 @dataclass()
 class Entity():

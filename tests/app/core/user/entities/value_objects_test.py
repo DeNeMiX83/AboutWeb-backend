@@ -31,30 +31,30 @@ class EmailTest:
 class PasswordTest:
     def test_password_without_digits(self):
         with pytest.raises(ValueError):
-            Password('TestPassword!')
+            RawPassword('TestPassword!')
 
     def test_password_without_uppercase(self):
         with pytest.raises(ValueError):
-            Password('testpassword1!')
+            RawPassword('testpassword1!')
 
     def test_password_without_lowercase(self):
         with pytest.raises(ValueError):
-            Password('TESTPASSWORD1!')
+            RawPassword('TESTPASSWORD1!')
 
     def test_password_without_special_characters(self):
         with pytest.raises(ValueError):
-            Password('TestPassword1')
+            RawPassword('TestPassword1')
 
     def test_password_less_than_8_characters(self):
         with pytest.raises(ValueError):
-            Password('Test1!')
+            RawPassword('Test1!')
 
     def test_password_more_than_32_characters(self):
         with pytest.raises(ValueError):
-            Password('TestPasswordTestPasswordTestPassword1!')
+            RawPassword('TestPasswordTestPasswordTestPassword1!')
 
     def test_password(self):
-        Password('TestPassword1!')
+        RawPassword('TestPassword1!')
 
 
 class PostTest:

@@ -1,9 +1,9 @@
 import pytest
-from app.core.user.usecase.create.handler import CreateUserHandler
+from app.core.user.usecase.register import RegisterUserUseCase
 
 
 @pytest.mark.usefixtures("users")
 def test_create_user_handler(users):
-    handler = CreateUserHandler()
+    handler = RegisterUserUseCase()
     for user in users:
         handler.execute(user)

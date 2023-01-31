@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 from pydantic import errors
-from uuid import UUID as _UUID
-from pathlib import PosixPath, Path
+from uuid import UUID
+from pathlib import Path
 from app.core.shared.entities.value_object import ValueObject
 
 
@@ -23,6 +23,3 @@ class Image(ValueObject):
 class ImageError(errors.PathError):
     code = 'image'
     msg_template = 'Path {path} is not a valid image'
-
-
-UUID = _UUID
