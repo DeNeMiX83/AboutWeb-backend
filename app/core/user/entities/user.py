@@ -11,4 +11,4 @@ class User(Entity):
     email: vo.Email
     password: vo.HashedPassword
     avatar: shared_vo.Image
-    posts: List[vo.Post] = field(default_factory=list)
+    positions: List[vo.Position] = field(default_factory=list)

@@ -92,7 +92,7 @@ class HashedPassword(ValueObject, str):
 
 
 @dataclass(frozen=True)
-class Post(str, ValueObject, Enum):
+class Position(str, ValueObject, Enum):
     BACKEND = 'backend'
     FRONTEND = 'frontend'
     DESIGNER = 'designer'

@@ -59,18 +59,18 @@ class PasswordTest:
 
 class PostTest:
     def test_post(self):
-        Post.BACKEND
+        Position.BACKEND
 
     def test_post_2(self):
-        Post('backend')
+        Position('backend')
 
     def test_post_wrong(self):
         with pytest.raises(ValueError):
-            Post('test')
+            Position('test')
 
     def test_post_wrong_type(self):
         with pytest.raises(ValueError):
-            Post(1)
+            Position(1)
 
 
 class UserNameTest:

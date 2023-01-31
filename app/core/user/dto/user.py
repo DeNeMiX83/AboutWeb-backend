@@ -7,4 +7,4 @@ class User(BaseDto):
     email: str
     password: str
     avatar: str
-    posts: List[str] = []
+    positions: List[str] = []

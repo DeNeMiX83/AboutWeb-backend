@@ -11,6 +11,6 @@ class UserTest():
             username=vo.UserName('test'),
             email=vo.Email('testemail@gmail.com'),
             password=vo.HashedPassword('8683bc3d-5d57-4956-8975-e573bb7bafd1'),
-            posts=[vo.Post('backend')],
+            positions=[vo.Position('backend')],
             avatar=shared_vo.Image(Path('tests/app/core/user/entities/data/test_image.png'))
         )
